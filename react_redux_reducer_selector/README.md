@@ -16,32 +16,38 @@ By the end of this project, you should understand:
 ## Tasks
 
 ### Task 0: Write a basic reducer
+
 - Created UI reducer with initial state
 - Implemented reducer function with actions for notification drawer and login
 - Added comprehensive test suite
 
 ### Task 1: Use Immutable for the UI Reducer
+
 - Installed Immutable.js
 - Updated UI reducer to use Immutable Map
 - Updated tests to work with Immutable.js
 
 ### Task 2: Create a reducer for Courses
+
 - Created course action types (FETCH_COURSE_SUCCESS, SELECT_COURSE, UNSELECT_COURSE)
 - Implemented course reducer with proper state management
 - Added tests for all course actions
 
 ### Task 3: Create the reducer for notifications
+
 - Created notification action types (FETCH_NOTIFICATIONS_SUCCESS, MARK_AS_READ, SET_TYPE_FILTER)
 - Implemented notification reducer with filter and notifications state
 - Added comprehensive test suite
 
 ### Task 4: Normalizr & Immutable
+
 - Created schema for courses and notifications using Normalizr
 - Updated reducers to use Immutable.js Maps
 - Implemented normalization for both courses and notifications
 - Updated all tests to work with normalized, immutable state
 
 ### Task 5: Selectors
+
 - Created notification selectors:
   - `filterTypeSelected`: Returns the current filter value
   - `getNotifications`: Returns all notifications as a Map
