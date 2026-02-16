@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "fetch-mock": "^12.6.0",
+    "redux-mock-store": "^1.5.5"
+  }
+}

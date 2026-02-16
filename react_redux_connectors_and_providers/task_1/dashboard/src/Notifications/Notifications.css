@@ -1,0 +1,30 @@
+.menuItem {
+  text-align: right;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.Notifications {
+  border: 2px dashed #e0354b;
+  padding: 1rem;
+  position: relative;
+  margin: 1rem;
+}
+
+.Notifications p {
+  margin: 0 0 1rem 0;
+}
+
+.Notifications ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Notifications ul li[data-notification-type="default"] {
+  color: blue;
+}
+
+.Notifications ul li[data-notification-type="urgent"] {
+  color: red;
+}
