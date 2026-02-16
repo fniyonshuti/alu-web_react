@@ -1,0 +1,268 @@
+[
+  {
+    "id": "5debd76480edafc8af244228",
+    "author": {
+       "id": "5debd764a7c57c7839d722e9",
+      "name": {
+        "first": "Poole",
+        "last": "Sanders"
+      },
+      "email": "poole.sanders@holberton.nz",
+      "picture": "http://placehold.it/32x32",
+      "age": 25
+    },
+    "context": {
+      "guid": "2d8e40be-1c78-4de0-afc9-fcc147afd4d2",
+      "isRead": true,
+      "type": "urgent",
+      "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+    }
+  },
+  {
+    "id": "5debd764507712e7a1307303",
+    "author": {
+      "id": "5debd7648ba8641ce0a34ea4",
+      "name": {
+        "first": "Norton",
+        "last": "Grimes"
+      },
+      "email": "norton.grimes@holberton.nz",
+      "picture": "http://placehold.it/32x32",
+      "age": 37
+    },
+    "context": {
+      "guid": "cec84b7a-7be4-4af0-b833-f1485433f66e",
+      "isRead": false,
+      "type": "urgent",
+      "value": "ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  },
+  {
+    "id": "5debd76444dd4dafea89d53b",
+    "author": {
+      "id": "5debd764a7c57c7839d722e9",
+      "name": {
+        "first": "Poole",
+        "last": "Sanders"
+      },
+      "email": "poole.sanders@holberton.nz",
+      "picture": "http://placehold.it/32x32",
+      "age": 25
+    },
+    "context": {
+      "guid": "280913fe-38dd-4abd-8ab6-5d7d9a34713d",
+      "isRead": false,
+      "type": "urgent",
+      "value": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    }
+  },
+  {
+    "id": "5debd76485ee4dfd1284f97b",
+    "author": {
+      "id": "5debd764f07f50822352e252",
+      "name": {
+        "first": "Roach",
+        "last": "Cameron"
+      },
+      "email": "roach.cameron@holberton.nz",
+      "picture": "http://placehold.it/32x32",
+      "age": 26
+    },
+    "context": {
+      "guid": "89906f88-a02d-41ee-b214-daa0c54633z3",
+      "isRead": true,
+      "type": "urgent",
+      "value": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+  },
+  {
+    "id": "5debd7644e561e022d66e61a",
+    "author": {
+      "id": "5debd764e66586653a8a33f3",
+      "name": {
+        "first": "Christy",
+        "last": "Collier"
+      },
+      "email": "christy.collier@holberton.nz",
+      "picture": "http://placehold.it/32x32",
+      "age": 27
+    },
+    "context": {
+      "guid": "f8d66cca-63ec-4f19-a422-a3e1c8f05a36",
+      "isRead": false,
+      "type": "urgent",
+       "value": "Sint non sunt, i.e. culpa qui officia deserunt mollit anim."
+    }
+  },
+  {
+    "id": "5debd7644aaed86c97bf9d5e",
+    "author": {
+      "id": "5debd764f5017139ce541857",
+      "name": {
+        "first": "Mason",
+        "last": "Douglas"
+      },
+      "email": "mason.douglas@holberton.nz",
+      "picture": "http://placehold.it/32x32",
+      "age": 31
+    },
+    "context": {
+      "guid": "e8be62f0-3a8f-433c-af7a-003b234bbc54",
+      "isRead": false,
+      "type": "default",
+      "value": "Ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  },
+  {
+    "id": "5debd76413f0d5e5429c28a0",
+    "author": {
+      "id": "5debd76456a6a030695e6a70",
+      "name": {
+        "first": "Marshall",
+        "last": "Wynn"
+      },
+      "email": "marshall.wynn@holberton.nz",
+      "picture": "http://placehold.it/32x32",
+      "age": 26
+    },
+    "context": {
+      "guid": "de55f849-2418-4a73-80f1-2459f3d62b74",
+      "isRead": false,
+      "type": "default",
+      "value": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    }
+  },
+  {
+    "id": "5debd7642e815cd350407777",
+    "author": {
+      "id": "5debd764f84b4fd8for a2738",
+      "name": {
+        "first": "Cherry",
+        "last": "Miles"
+      },
+      "email": "cherry.miles@holberton.nz",
+      "picture": "http://placehold.it/32x32",
+      "age": 25
+    },
+    "context": {
+      "guid": "3068c575-d619-40af-bf12-dece1ee18dd3",
+      "isRead": true,
+      "type": "default",
+      "value": "Est, sed do eiusmod tempor incididunt."
+    }
+  },
+  {
+    "id": "5debd764c1127bc5a490a4d0",
+    "author": {
+      "id": "5debd76470dcced4a244fe69",
+      "name": {
+        "first": "Sykes",
+        "last": "Fulton"
+      },
+      "email": "sykes.fulton@holberton.nz",
+      "picture": "http://placehold.it/32x32",
+      "age": 36
+    },
+    "context": {
+      "guid": "efb6c485-00f7-4fdf-97cc-5e12d14d6c41",
+      "isRead": false,
+      "type": "default",
+      "value": "Esse et dolore incididunt excepteur ipsum labore ipsum dolore."
+    }
+  },
+  {
+    "id": "5debd7646ef31e0861ec1cab",
+    "author": {
+      "id": "5debd7645c8d811b8c6a235d",
+      "name": {
+        "first": "Valentine",
+        "last": "Juarez"
+      },
+      "email": "valentine.juarez@holberton.nz",
+      "picture": "http://placehold.it/32x32",
+      "age": 25
+    },
+    "context": {
+      "guid": "1d3918d0-67e6-44a4-9031-72d7750234de",
+      "isRead": false,
+      "type": "default",
+      "value": "Commodo consectetur incididunt velit reprehenderit consectetur veniam deserunt."
+    }
+  },
+  {
+    "id": "5debd764a4f11eabef05a81d",
+    "author": {
+      "id": "5debd764d0b0ef7e4ec59b3f",
+      "name": {
+        "first": "Paul",
+        "last": "Ali"
+      },
+      "email": "paul.ali@holberton.nz",
+      "picture": "http://placehold.it/32x32",
+      "age": 33
+    },
+    "context": {
+      "guid": "f09acfa1-6528-4c62-8920-f7d4e96c1f21",
+      "isRead": false,
+      "type": "default",
+      "value": "Aliquip ex irure minim ad esse quis sint veniam id laborum officia."
+    }
+  },
+  {
+    "id": "5debd7645186c0c8cc6fe6c8",
+    "author": {
+      "id": "5debd764b62d1958c1eeb4fb",
+      "name": {
+        "first": "Norton",
+        "last": "Flores"
+      },
+      "email": "norton.flores@holberton.nz",
+      "picture": "http://placehold.it/32x32",
+      "age": 32
+    },
+    "context": {
+      "guid": "080cd68e-dc63-4877-8ea3-f8c1a1ab0a19",
+      "isRead": false,
+      "type": "default",
+      "value": "Do commodo aliqua Lorem labore anim."
+    }
+  },
+  {
+    "id": "5debd764507712e7a1307303",
+    "author": {
+      "id": "5debd7648ba8641ce0a34ea4",
+      "name": {
+        "first": "Norton",
+        "last": "Grimes"
+      },
+      "email": "norton.grimes@holberton.nz",
+      "picture": "http://placehold.it/32x32",
+      "age": 37
+    },
+    "context": {
+      "guid": "cec84b7a-7be4-4af0-b833-f1485433f66e",
+      "isRead": false,
+      "type": "default",
+      "value": "Enim sint esse in vero eos."
+    }
+  },
+  {
+    "id": "5debd764e7263209b59f229e",
+    "author": {
+      "id": "5debd764ccdba3a087203076",
+      "name": {
+        "first": "Joseph",
+        "last": "Dalton"
+      },
+      "email": "joseph.dalton@holberton.nz",
+      "picture": "http://placehold.it/32x32",
+      "age": 28
+    },
+    "context": {
+      "guid": "98fe7e04-7394-48a5-8d4e-5b89492dfbcf",
+      "isRead": false,
+      "type": "default",
+      "value": "Consequat ad consectetur consectetur ea adipisicing dolor."
+    }
+  }
+]
