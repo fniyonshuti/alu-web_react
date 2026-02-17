@@ -1,0 +1,13 @@
+#count {
+  display: inline;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+#start-btn {
+  margin-right: 10px;
+}
+
+p {
+  margin: 10px;
+}
