@@ -8,6 +8,12 @@ describe("Notifications component tests", () => {
     expect(wrapper.exists()).toBe(true);
   });
 
+  it("menu item is displayed when displayDrawer is false", () => {
+    const wrapper = shallow(<Notifications displayDrawer={false} />);
+    expect(wrapper.find(".menuItem").length).toBe(1);
+    expect(wrapper.find("button").length).toBe(0);
+  });
+
   it("clicking on menu item calls handleDisplayDrawer", () => {
     const handleDisplayDrawer = jest.fn();
     const wrapper = shallow(
