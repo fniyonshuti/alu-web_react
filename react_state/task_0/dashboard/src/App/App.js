@@ -50,7 +50,8 @@ class App extends Component {
 
   render() {
     const { isLoggedIn } = this.props;
-    const { displayDrawer, user, listCourses } = this.state;
+    const { displayDrawer } = this.state;
+    const { user, listCourses } = this.state;
 
     return (
       <>
