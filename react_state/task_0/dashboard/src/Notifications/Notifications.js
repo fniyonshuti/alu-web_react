@@ -16,7 +16,7 @@ class Notifications extends React.Component {
     const { displayDrawer, handleDisplayDrawer, handleHideDrawer } = this.props;
 
     return (
-      <>
+      <div>
         <div className="menuItem" onClick={handleDisplayDrawer}>
           Your notifications
         </div>
@@ -50,7 +50,7 @@ class Notifications extends React.Component {
             </ul>
           </div>
         )}
-      </>
+      </div>
     );
   }
 }
