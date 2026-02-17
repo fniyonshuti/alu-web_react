@@ -1,0 +1,21 @@
+.App-body form {
+  margin: 0;
+}
+
+.App-body label {
+  margin-right: 0.5rem;
+}
+
+.App-body input[type="email"],
+.App-body input[type="password"] {
+  margin-right: 1rem;
+}
+
+.App-body input[type="submit"] {
+  cursor: pointer;
+}
+
+.App-body input[type="submit"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
