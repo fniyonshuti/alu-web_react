@@ -1,44 +1,45 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
-  mode: "production",
-  entry: "./js/dashboard_main.js",
+  mode: 'production',
+  entry: './js/dashboard_main.js',
   output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "public"),
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'public'),
   },
   performance: {
     maxAssetSize: 1000000,
     maxEntrypointSize: 1000000,
+    hints: false
   },
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        type: "asset/resource",
+        test: /\.(png|jpe?g|gif)$/i,
         use: [
+          'file-loader',
           {
-            loader: "image-webpack-loader",
+            loader: 'image-webpack-loader',
             options: {
               mozjpeg: {
                 progressive: true,
-                quality: 65,
+                quality: 65
               },
               optipng: {
                 enabled: true,
               },
               pngquant: {
-                quality: [0.65, 0.9],
-                speed: 4,
+                quality: [0.65, 0.90],
+                speed: 4
               },
               gifsicle: {
                 interlaced: false,
               },
-            },
+            }
           },
         ],
       },

@@ -1,6 +1,4 @@
-#footer-text {
+footer {
+  margin-top: 50px;
   font-style: italic;
-  margin-top: 30px;
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
 }
