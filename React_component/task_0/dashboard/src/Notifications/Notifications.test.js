@@ -46,7 +46,7 @@ describe("Notifications component", () => {
         />,
       );
       expect(wrapper.find(NotificationItem).length).toBe(3);
-      expect(wrapper.find("p").first().text()).toBe(
+      expect(wrapper.find(".Notifications p").first().text()).toBe(
         "Here is the list of notifications",
       );
     });
@@ -58,13 +58,17 @@ describe("Notifications component", () => {
         <Notifications displayDrawer={true} listNotifications={[]} />,
       );
       expect(wrapper.find(NotificationItem).length).toBe(0);
-      expect(wrapper.find("p").text()).toBe("No new notification for now");
+      expect(wrapper.find(".Notifications p").text()).toBe(
+        "No new notification for now",
+      );
     });
 
     it("renders correctly if listNotifications is not provided", () => {
       const wrapper = shallow(<Notifications displayDrawer={true} />);
       expect(wrapper.find(NotificationItem).length).toBe(0);
-      expect(wrapper.find("p").text()).toBe("No new notification for now");
+      expect(wrapper.find(".Notifications p").text()).toBe(
+        "No new notification for now",
+      );
     });
   });
 
