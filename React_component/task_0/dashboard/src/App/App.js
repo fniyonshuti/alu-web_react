@@ -22,7 +22,7 @@ class App extends React.Component {
     const listNotifications = [
       { id: 1, type: "default", value: "New course available" },
       { id: 2, type: "urgent", value: "New course available" },
-      { id: 3, type: "urgent", html: htmlObj },
+      { id: 3, type: "urgent", html: { __html: htmlObj } },
     ];
 
     return (
