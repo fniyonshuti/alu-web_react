@@ -1,37 +1,52 @@
 import React from "react";
-import "./CourseList.css";
+import PropTypes from "prop-types";
 import CourseListRow from "./CourseListRow";
+import "./CourseList.css";
 
-function CourseList() {
+function CourseList({ listCourses }) {
   return (
     <table id="CourseList">
       <thead>
-        <CourseListRow isHeader={true} textFirstCell="Available courses" />
+        <CourseListRow textFirstCell="Available courses" isHeader={true} />
         <CourseListRow
-          isHeader={true}
           textFirstCell="Course name"
           textSecondCell="Credit"
+          isHeader={true}
         />
       </thead>
       <tbody>
-        <CourseListRow
-          isHeader={false}
-          textFirstCell="ES6"
-          textSecondCell="60"
-        />
-        <CourseListRow
-          isHeader={false}
-          textFirstCell="Webpack"
-          textSecondCell="20"
-        />
-        <CourseListRow
-          isHeader={false}
-          textFirstCell="React"
-          textSecondCell="40"
-        />
+        {listCourses.length === 0 ? (
+          <CourseListRow
+            textFirstCell="No course available yet"
+            isHeader={false}
+          />
+        ) : (
+          listCourses.map((course) => (
+            <CourseListRow
+              key={course.id}
+              textFirstCell={course.name}
+              textSecondCell={course.credit.toString()}
+              isHeader={false}
+            />
+          ))
+        )}
       </tbody>
     </table>
   );
 }
+
+CourseList.propTypes = {
+  listCourses: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      credit: PropTypes.number.isRequired,
+    }),
+  ),
+};
+
+CourseList.defaultProps = {
+  listCourses: [],
+};
 
 export default CourseList;
