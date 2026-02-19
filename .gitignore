@@ -10,7 +10,7 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 build/
-dist/
+# dist/
 .vscode/
 .idea/
 *.swp
