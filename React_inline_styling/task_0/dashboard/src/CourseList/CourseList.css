@@ -1,16 +1,14 @@
 #CourseList {
-  border: 1px solid #ddd;
-  width: 100%;
-  border-collapse: collapse;
+    width: 90vw;
+    margin: 0 5vw;
+    border: 1px solid grey;
 }
 
-#CourseList th,
-#CourseList td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+tr th {
+    border-bottom: 1px solid grey;
 }
 
-#CourseList th {
-  background-color: #f2f2f2;
+tbody,
+thead tr:nth-child(2) {
+    text-align: left;
 }

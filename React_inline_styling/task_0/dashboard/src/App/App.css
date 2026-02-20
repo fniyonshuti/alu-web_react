@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
-  --color-brand: #e01d3f;
+  --holb-red: #FF0000;
 }
