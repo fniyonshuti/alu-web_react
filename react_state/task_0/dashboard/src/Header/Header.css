@@ -1,27 +1,14 @@
 .App-header {
+  background-color: white;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  border-bottom: 3px solid #e0354b;
-  padding: 1rem;
-}
-
-.App-logo {
-  height: 200px;
-  pointer-events: none;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  border-bottom: 4px solid var(--holb-red);
 }
 
 .App-header h1 {
-  margin: 0;
-  color: #e0354b;
-  flex: 1;
-}
-
-#logoutSection {
-  font-style: italic;
-}
-
-#logoutSection a {
-  color: #e0354b;
-  text-decoration: none;
-  cursor: pointer;
+  max-width: fit-content;
+  color: var(--holb-red);
 }

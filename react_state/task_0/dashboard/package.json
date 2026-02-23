@@ -1,46 +1,25 @@
 {
-  "name": "dashboard",
-  "version": "0.1.0",
+  "name": "react_state_dashboard",
+  "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.2",
-    "@testing-library/user-event": "^13.5.0",
-    "immutable": "^4.0.0",
-    "normalizr": "^3.6.2",
-    "prop-types": "^15.8.1",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  "devDependencies": {
-    "@cfaester/enzyme-adapter-react-18": "^0.8.0",
-    "enzyme": "^3.11.0"
-  },
   "scripts": {
     "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom --watchAll=false",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "prop-types": "^15.8.1",
+    "react-hot-loader": "^4.13.1"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.7",
+    "cheerio": "1.0.0-rc.10",
+    "react-test-renderer": "^16.14.0",
+    "identity-obj-proxy": "^3.0.0",
+    "react-scripts": "^3.4.4"
   }
 }

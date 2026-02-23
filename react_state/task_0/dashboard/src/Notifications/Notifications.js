@@ -1,70 +1,77 @@
-import React from "react";
-import PropTypes from "prop-types";
-import NotificationItem from "./NotificationItem";
-import "./Notifications.css";
+import React from 'react';
+import './Notifications.css';
+import close_icon from '../assets/close-icon.png';
+import NotificationItem from './NotificationItem';
+import PropTypes from 'prop-types';
+import NotificationItemShape from './NotificationItemShape';
 
 class Notifications extends React.Component {
-  shouldComponentUpdate(nextProps) {
-    return (
-      nextProps.displayDrawer !== this.props.displayDrawer ||
-      nextProps.handleDisplayDrawer !== this.props.handleDisplayDrawer ||
-      nextProps.handleHideDrawer !== this.props.handleHideDrawer
-    );
-  }
+    constructor(props) {
+        super(props);
+        this.markAsRead = this.markAsRead.bind(this);
+    }
 
-  render() {
-    const { displayDrawer, handleDisplayDrawer, handleHideDrawer } = this.props;
+    markAsRead(id) {
+        console.log(`Notification ${id} has been marked as read`);
+    }
 
-    return (
-      <div>
-        <div className="menuItem" onClick={handleDisplayDrawer}>
-          Your notifications
-        </div>
-        {displayDrawer && (
-          <div className="Notifications">
-            <button
-              style={{
-                position: "absolute",
-                top: "10px",
-                right: "10px",
-                border: "none",
-                background: "transparent",
-                cursor: "pointer",
-              }}
-              aria-label="Close"
-              onClick={handleHideDrawer}
-            >
-              x
-            </button>
-            <p>Here is the list of notifications</p>
-            <ul>
-              <NotificationItem type="default" value="New course available" />
-              <NotificationItem type="urgent" value="New resume available" />
-              <NotificationItem
-                type="urgent"
-                html={{
-                  __html:
-                    "<strong>Urgent requirement</strong> - complete by EOD",
-                }}
-              />
-            </ul>
-          </div>
-        )}
-      </div>
-    );
-  }
+    shouldComponentUpdate(nextProps) {
+        return nextProps.listNotifications.length > this.props.listNotifications.length || nextProps.displayDrawer !== this.props.displayDrawer;
+    }
+
+    render() {
+        const { displayDrawer, listNotifications, handleDisplayDrawer, handleHideDrawer } = this.props;
+        return (
+            <>
+            <div className="menuItem" onClick={ handleDisplayDrawer }>
+                Your notifications
+            </div>
+            {displayDrawer &&
+            <div className="Notifications">
+                { listNotifications.length > 0 ? (
+                    <>
+                        <button
+                            aria-label="Close"
+                            onClick={ handleHideDrawer }
+                        ><img
+                                src={ close_icon }
+                                alt="Close"
+                            />
+                        </button>
+                        <p>Here is the list of notifications</p>
+                        <ul>
+                            { listNotifications.map((notification) => (
+                                <NotificationItem
+                                    key={ notification.id }
+                                    id={ notification.id }
+                                    type={ notification.type }
+                                    value={ notification.value }
+                                    html={ notification.html }
+                                    markAsRead={ this.markAsRead }
+                                />
+                            )) }
+                        </ul>
+                    </>
+                ) : <p>No new notification for now</p> }
+            </div>
+            }
+            </>
+        );
+    }
 }
 
 Notifications.propTypes = {
-  displayDrawer: PropTypes.bool,
-  handleDisplayDrawer: PropTypes.func,
-  handleHideDrawer: PropTypes.func,
+    displayDrawer: PropTypes.bool,
+    listNotifications: PropTypes.arrayOf(NotificationItemShape),
+    handleDisplayDrawer: PropTypes.func,
+    handleHideDrawer: PropTypes.func,
 };
 
 Notifications.defaultProps = {
-  displayDrawer: false,
-  handleDisplayDrawer: () => {},
-  handleHideDrawer: () => {},
-};
+    displayDrawer: false,
+    listNotifications: [],
+    handleDisplayDrawer: () => {},
+    handleHideDrawer: () => {},
+}
 
 export default Notifications;

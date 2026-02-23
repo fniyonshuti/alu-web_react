@@ -1,74 +1,25 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "./Login.css";
+import './Login.css';
+import React from 'react';
 
-class Login extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: "",
-      password: "",
-      enableSubmit: false,
-    };
-  }
-
-  handleLoginSubmit = (e) => {
-    e.preventDefault();
-    const { email, password } = this.state;
-    this.props.logIn(email, password);
-  };
-
-  handleChangeEmail = (e) => {
-    this.setState({ email: e.target.value }, this.updateSubmitButton);
-  };
-
-  handleChangePassword = (e) => {
-    this.setState({ password: e.target.value }, this.updateSubmitButton);
-  };
-
-  updateSubmitButton = () => {
-    const { email, password } = this.state;
-    this.setState({
-      enableSubmit: email !== "" && password !== "",
-    });
-  };
-
-  render() {
-    const { email, password, enableSubmit } = this.state;
-
+function Login() {
     return (
-      <form onSubmit={this.handleLoginSubmit}>
         <div className="App-body">
-          <p>Login to access the full dashboard</p>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={email}
-            onChange={this.handleChangeEmail}
-          />
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={password}
-            onChange={this.handleChangePassword}
-          />
-          <input type="submit" value="OK" disabled={!enableSubmit} />
+            <p>Login to access the full dashboard</p>
+            <div className="form">
+                <label htmlFor="email">
+                    <span>Email:</span>
+                    <input type="email" name="email" id="email" />
+                </label>
+
+                <label htmlFor="password">
+                    <span>Password:</span>
+                    <input type="password" name="password" id="pwd" />
+                </label>
+
+                <button onClick={ () => { } }>OK</button>
+            </div>
         </div>
-      </form>
     );
-  }
 }
-
-Login.propTypes = {
-  logIn: PropTypes.func,
-};
-
-Login.defaultProps = {
-  logIn: () => {},
-};
 
 export default Login;
