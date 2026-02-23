@@ -1,5 +1,5 @@
-import { concatElements, mergeElements } from './5-merge.js';
 import { List, Map } from 'immutable';
+import { concatElements, mergeElements } from './5-merge.js';
 
 describe('Merge & Concat', () => {
   describe('concatElements', () => {
@@ -7,7 +7,7 @@ describe('Merge & Concat', () => {
       const page1 = ['a', 'b', 'c'];
       const page2 = ['d', 'e', 'f'];
       const result = concatElements(page1, page2);
-      
+
       expect(List.isList(result)).toBe(true);
       expect(result.size).toBe(6);
       expect(result.toJS()).toEqual(['a', 'b', 'c', 'd', 'e', 'f']);
@@ -17,7 +17,7 @@ describe('Merge & Concat', () => {
       const page1 = ['a', 'b'];
       const page2 = [];
       const result = concatElements(page1, page2);
-      
+
       expect(List.isList(result)).toBe(true);
       expect(result.size).toBe(2);
       expect(result.toJS()).toEqual(['a', 'b']);
@@ -27,7 +27,7 @@ describe('Merge & Concat', () => {
       const page1 = [1, 2, 3];
       const page2 = ['a', 'b', 'c'];
       const result = concatElements(page1, page2);
-      
+
       expect(result.toJS()).toEqual([1, 2, 3, 'a', 'b', 'c']);
     });
   });
@@ -37,7 +37,7 @@ describe('Merge & Concat', () => {
       const page1 = { name: 'John', age: 30 };
       const page2 = { city: 'New York', country: 'USA' };
       const result = mergeElements(page1, page2);
-      
+
       expect(Map.isMap(result)).toBe(true);
       expect(result.get('name')).toBe('John');
       expect(result.get('age')).toBe(30);
@@ -49,7 +49,7 @@ describe('Merge & Concat', () => {
       const page1 = { name: 'John', age: 30, city: 'Boston' };
       const page2 = { age: 31, city: 'New York' };
       const result = mergeElements(page1, page2);
-      
+
       expect(Map.isMap(result)).toBe(true);
       expect(result.get('name')).toBe('John');
       expect(result.get('age')).toBe(31);
@@ -60,25 +60,25 @@ describe('Merge & Concat', () => {
       const page1 = { name: 'John' };
       const page2 = {};
       const result = mergeElements(page1, page2);
-      
+
       expect(Map.isMap(result)).toBe(true);
       expect(result.get('name')).toBe('John');
       expect(result.size).toBe(1);
     });
 
     it('should merge objects with various data types', () => {
-      const page1 = { 
+      const page1 = {
         firstName: 'Guillaume',
         lastName: 'Salva',
-        age: 25
+        age: 25,
       };
-      const page2 = { 
+      const page2 = {
         lastName: 'Smith',
         age: 30,
-        email: 'guillaume@example.com'
+        email: 'guillaume@example.com',
       };
       const result = mergeElements(page1, page2);
-      
+
       expect(result.get('firstName')).toBe('Guillaume');
       expect(result.get('lastName')).toBe('Smith');
       expect(result.get('age')).toBe(30);

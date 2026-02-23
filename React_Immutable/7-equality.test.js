@@ -1,5 +1,5 @@
-import areMapsEqual from './7-equality.js';
 import { Map } from 'immutable';
+import areMapsEqual from './7-equality.js';
 
 describe('areMapsEqual', () => {
   it('should return true for equal maps', () => {

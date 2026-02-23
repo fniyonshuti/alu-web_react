@@ -1,5 +1,5 @@
-import mergeDeeplyElements from './6-deeply.js';
 import { Map } from 'immutable';
+import mergeDeeplyElements from './6-deeply.js';
 
 describe('mergeDeeplyElements', () => {
   it('should deeply merge two objects', () => {
@@ -10,8 +10,8 @@ describe('mergeDeeplyElements', () => {
         likes: {
           1: {
             uid: 1234,
-          }
-        }
+          },
+        },
       },
     };
 
@@ -20,15 +20,15 @@ describe('mergeDeeplyElements', () => {
         likes: {
           2: {
             uid: 134,
-          }
-        }
+          },
+        },
       },
     };
 
     const result = mergeDeeplyElements(page1, page2);
-    
+
     expect(Map.isMap(result)).toBe(true);
-    
+
     const resultJS = result.toJS();
     expect(resultJS['user-1'].id).toBe(1);
     expect(resultJS['user-1'].name).toBe('test');
@@ -44,8 +44,8 @@ describe('mergeDeeplyElements', () => {
         likes: {
           1: {
             uid: 1234,
-          }
-        }
+          },
+        },
       },
     };
 
@@ -54,8 +54,8 @@ describe('mergeDeeplyElements', () => {
         likes: {
           2: {
             uid: 134,
-          }
-        }
+          },
+        },
       },
     };
 
@@ -69,22 +69,22 @@ describe('mergeDeeplyElements', () => {
     const page1 = {
       'user-1': {
         id: 1,
-        name: 'Alice'
+        name: 'Alice',
       },
       'user-2': {
         id: 2,
-        name: 'Bob'
-      }
+        name: 'Bob',
+      },
     };
 
     const page2 = {
       'user-1': {
-        age: 25
+        age: 25,
       },
       'user-3': {
         id: 3,
-        name: 'Charlie'
-      }
+        name: 'Charlie',
+      },
     };
 
     const result = mergeDeeplyElements(page1, page2);
@@ -101,14 +101,14 @@ describe('mergeDeeplyElements', () => {
     const page1 = {
       user: {
         name: 'John',
-        age: 30
-      }
+        age: 30,
+      },
     };
 
     const page2 = {
       user: {
-        age: 31
-      }
+        age: 31,
+      },
     };
 
     const result = mergeDeeplyElements(page1, page2);

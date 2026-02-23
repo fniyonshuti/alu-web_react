@@ -1,5 +1,5 @@
-import { map, map2 } from './4-mutations.js';
 import { Map } from 'immutable';
+import { map, map2 } from './4-mutations.js';
 
 describe('Chained mutations', () => {
   describe('map', () => {

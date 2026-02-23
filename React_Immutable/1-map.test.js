@@ -1,5 +1,5 @@
-import getImmutableObject from './1-map.js';
 import { Map } from 'immutable';
+import getImmutableObject from './1-map.js';
 
 describe('getImmutableObject', () => {
   it('should convert a plain object to an Immutable Map', () => {
@@ -7,11 +7,11 @@ describe('getImmutableObject', () => {
       fear: true,
       smell: -1033575916.9145899,
       wall: false,
-      thing: -914767132
+      thing: -914767132,
     };
 
     const result = getImmutableObject(object);
-    
+
     expect(Map.isMap(result)).toBe(true);
     expect(result.get('fear')).toBe(true);
     expect(result.get('smell')).toBe(-1033575916.9145899);
@@ -25,11 +25,11 @@ describe('getImmutableObject', () => {
       fear: true,
       smell: -1033575916.9145899,
       wall: false,
-      thing: -914767132
+      thing: -914767132,
     };
 
     const result = getImmutableObject(object);
-    
+
     expect(result.toJS()).toEqual(object);
   });
 });
