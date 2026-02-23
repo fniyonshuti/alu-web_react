@@ -1,15 +1,23 @@
-import React from "react";
-import { shallow } from "enzyme";
-import Login from "./Login";
+import React from 'react';
+import { shallow } from 'enzyme';
+import { StyleSheetTestUtils } from 'aphrodite';
+import Login from './Login';
 
-describe("Login component", () => {
-  it("renders without crashing", () => {
-    shallow(<Login />);
-  });
+StyleSheetTestUtils.suppressStyleInjection();
 
-  it("renders 2 input tags and 2 label tags", () => {
-    const wrapper = shallow(<Login />);
-    expect(wrapper.find("input").length).toBe(2);
-    expect(wrapper.find("label").length).toBe(2);
-  });
+describe('<Login />', () => {
+    it('renders an <Login /> component checking for App-Login', () => {
+        const wrapper = shallow(<Login />);
+        expect(wrapper.find('div')).toHaveLength(2);
+    });
+
+    it('renders an <Login /> component checking for input', () => {
+        const wrapper = shallow(<Login />);
+        expect(wrapper.find('input')).toHaveLength(2);
+    });
+
+    it('renders an <Login /> component checking for label', () => {
+        const wrapper = shallow(<Login />);
+        expect(wrapper.find('label')).toHaveLength(2);
+    });
 });
