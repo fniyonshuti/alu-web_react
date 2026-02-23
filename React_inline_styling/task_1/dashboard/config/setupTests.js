@@ -1,4 +1,10 @@
-import { configure } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
+const { TextEncoder, TextDecoder } = require('util');
+require('regenerator-runtime/runtime');
 
-configure({ adapter: new Adapter() });
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
+const Enzyme = require('enzyme');
+const Adapter = require('enzyme-adapter-react-16');
+
+Enzyme.configure({ adapter: new Adapter() });
